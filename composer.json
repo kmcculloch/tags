@@ -1,0 +1,15 @@
+{
+    "name": "kmcculloch/tags",
+    "description": "Command line MP3 tagger",
+    "require": {
+        "symfony/console": "^3.0",
+        "james-heinrich/getid3": "^1.9"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Kevin McCulloch",
+            "email": "p.kevin.mcculloch@gmail.com"
+        }
+    ]
+}
