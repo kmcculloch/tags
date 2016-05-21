@@ -5,6 +5,11 @@
         "symfony/console": "^3.0",
         "james-heinrich/getid3": "^1.9"
     },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
     "license": "GPL",
     "authors": [
         {
