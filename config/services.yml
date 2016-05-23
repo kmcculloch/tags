@@ -7,6 +7,11 @@ services:
     arguments:
       name: 'find'
       parameters: '@tagt.parameters'
+  tagt.stage_command:
+    class: Tagt\Command\StageCommand
+    arguments:
+      name: 'stage'
+      parameters: '@tagt.parameters'
   tagt.view_command:
     class: Tagt\Command\ViewCommand
     arguments:
@@ -16,4 +21,5 @@ services:
     class: Symfony\Component\Console\Application
     calls:
       - [add, ['@tagt.find_command']]
+      - [add, ['@tagt.stage_command']]
       - [add, ['@tagt.view_command']]
