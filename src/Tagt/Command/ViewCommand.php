@@ -3,38 +3,23 @@
 
 namespace Tagt\Command;
 
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * tagt find <search>
+ * Command object for tagt view.
  */
-class ViewCommand extends Command
+class ViewCommand extends TagtCommand
 {
     protected function configure()
     {
-        $this
-            ->setName('view')
-            ->setDescription('View ID3 tags')
-            ->addArgument(
-                'file',
-                InputArgument::REQUIRED,
-                'Search string'
-            )
-        ;
+        $this->setDescription('View ID3 tags for MP3s in the staging area');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $file = $input->getArgument('file');
-
-        // $getID3 = new \getID3();
-
-        // $info = $getID3->analyze($file);
-        // var_dump(array_keys($info['tags']['id3v2']));
-        // var_dump($info['tags']);
+        $output->writeln('Stage directory: '.$this->getParameter('stage_dir'));
     }
 }

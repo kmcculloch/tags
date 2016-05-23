@@ -12,21 +12,6 @@ require_once __DIR__.'/../vendor/autoload.php';
 $container = new ContainerBuilder();
 $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../config'));
 $loader->load('services.yml');
-$loader->load('parameters.yml');
-
-// var_dump($container->getServiceIds());
-
-// $output = $container->get('symfony.console_output');
 
 $application = $container->get('tagt.application');
 $application->run();
-
-// var_dump($container->getParameter('stage_dir'));
-// use Tagt\Command\FindCommand;
-// use Tagt\Command\ViewCommand;
-// use Symfony\Component\Console\Application;
-
-// $app = new Application();
-// $app->add(new FindCommand());
-// $app->add(new ViewCommand());
-// $app->run();
