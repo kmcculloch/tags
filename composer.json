@@ -1,9 +1,13 @@
 {
-    "name": "kmcculloch/tags",
+    "name": "kmcculloch/tagt",
     "description": "Command line MP3 tagger",
     "require": {
         "symfony/console": "^3.0",
-        "james-heinrich/getid3": "^1.9"
+        "james-heinrich/getid3": "^1.9",
+        "pyrex-fwi/id3": "^0.2.0",
+        "symfony/dependency-injection": "^3.0",
+        "symfony/config": "^3.0",
+        "symfony/yaml": "^3.0"
     },
     "autoload": {
         "psr-4": {

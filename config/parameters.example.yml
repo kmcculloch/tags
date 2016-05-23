@@ -1,0 +1,4 @@
+---
+parameters:
+  stage_dir: '/tmp/tagt'
+  itunes_auto_add_dir: '/path/to/iTunes Media/Automatically Add to iTunes.localized'

@@ -1,0 +1,19 @@
+---
+imports:
+  - { resource: 'parameters.yml' }
+
+services:
+  tagt.parameters:
+    class: Tagt\Parameters
+  tagt.find_command:
+    class: Tagt\Command\FindCommand
+    arguments:
+      name: null
+      parameters: '@tagt.parameters'
+  tagt.view_command:
+    class: Tagt\Command\ViewCommand
+  tagt.application:
+    class: Symfony\Component\Console\Application
+    calls:
+      - [add, ['@tagt.find_command']]
+      - [add, ['@tagt.view_command']]
